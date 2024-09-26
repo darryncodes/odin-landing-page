@@ -2,6 +2,7 @@
     --clr-neutral-400: #f9faf8;
     --clr-neutral-500: #e5e7eb;
     --clr-primary-400: #3882d6;
+    --clr-primary-500: #357bca;
     --clr-primary-600: #1f2937;
 
     --fs-base: 1rem; /* 16px */
@@ -12,6 +13,8 @@
     --fs-4xl: 2.25rem; /* 36px */
     --fs-5xl: 3.75rem; /* 48px */
     --fs-6xl: 4.5rem; /* 60px */
+
+    --radius: 0.5rem;
 }
 
 body {
@@ -49,7 +52,16 @@ nav {
     flex-direction: column;
     gap: 1rem;
     list-style: none;
+}
+
+.nav__link {
     color: var(--clr-neutral-500);
+    text-decoration: none;
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 .nav__btn {
@@ -63,6 +75,54 @@ nav {
 
 .show {
     display: flex;
+}
+
+header {
+    background-color: var(--clr-primary-600);
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 2rem;
+}
+
+.hero__content {
+    max-width: 30rem;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.hero__heading {
+    color: var(--clr-neutral-400);
+}
+
+.hero__text {
+    color: var(--clr-neutral-500);
+}
+
+.hero__img {
+    order: 1;
+}
+
+.btn {
+    color: var(--clr-neutral-500);
+    border: none;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--clr-primary-400);
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: var(--clr-neutral-400);
+    background-color: var(--clr-primary-500);
 }
 
 /* 640px */
@@ -86,10 +146,30 @@ nav {
 }
 /* 768px */
 @media only screen and (min-width: 48em) {
+    header {
+        padding-top: 6rem;
+        padding-bottom: 10rem;
+    }
+
+    .hero {
+        grid-template-columns: 2fr 3fr;
+    }
+
+    .hero__content {
+        order: unset;
+    }
+
+    .hero__img {
+        order: unset;
+    }
 }
 /* 1024px */
 @media only screen and (min-width: 64em) {
     body {
         font-size: var(--fs-xl);
+    }
+    header {
+        padding-top: 8rem;
+        padding-bottom: 12rem;
     }
 }
