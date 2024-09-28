@@ -170,6 +170,12 @@ header {
     padding-bottom: 0.5rem;
 }
 
+footer {
+    color: var(--clr-neutral-500);
+    background-color: var(--clr-primary-700);
+    padding: 2rem 0;
+}
+
 /* Utility classes */
 
 .container {
