@@ -3,7 +3,8 @@
     --clr-neutral-500: #e5e7eb;
     --clr-primary-400: #3882d6;
     --clr-primary-500: #357bca;
-    --clr-primary-600: #1f2937;
+    --clr-primary-600: #364457;
+    --clr-primary-700: #1f2937;
 
     --fs-base: 1rem; /* 16px */
     --fs-lg: 1.125rem; /* 18px */
@@ -21,17 +22,19 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: var(--fs-base);
+    color: var(--clr-primary-600);
     background-color: var(--clr-neutral-400);
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
+h1,
+h2 {
+    color: var(--clr-primary-700);
+    font-weight: 900;
+    line-height: 1;
 }
 
 nav {
-    background-color: var(--clr-primary-600);
+    background-color: var(--clr-primary-700);
 }
 
 .nav {
@@ -73,12 +76,8 @@ nav {
     cursor: pointer;
 }
 
-.show {
-    display: flex;
-}
-
 header {
-    background-color: var(--clr-primary-600);
+    background-color: var(--clr-primary-700);
     padding-top: 4rem;
     padding-bottom: 8rem;
 }
@@ -111,6 +110,41 @@ header {
     order: 1;
 }
 
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.cards__item {
+    flex-basis: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cards__square {
+    border: solid 3px var(--clr-primary-400);
+    border-radius: var(--radius);
+    height: 8rem;
+    width: 8rem;
+}
+
+/* Utility classes */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.show {
+    display: flex;
+}
+
 .btn {
     color: var(--clr-neutral-500);
     border: none;
@@ -123,6 +157,14 @@ header {
 .btn:hover {
     color: var(--clr-neutral-400);
     background-color: var(--clr-primary-500);
+}
+
+.padding-y {
+    padding: 4rem 0;
+}
+
+.center {
+    text-align: center;
 }
 
 /* 640px */
@@ -162,6 +204,10 @@ header {
     .hero__img {
         order: unset;
     }
+
+    .padding-y {
+        padding: 6rem 0;
+    }
 }
 /* 1024px */
 @media only screen and (min-width: 64em) {
@@ -171,5 +217,9 @@ header {
     header {
         padding-top: 8rem;
         padding-bottom: 12rem;
+    }
+
+    .padding-y {
+        padding: 8rem 0;
     }
 }
