@@ -133,6 +133,28 @@ header {
     width: 8rem;
 }
 
+.testimonial {
+    background-color: var(--clr-neutral-500);
+}
+
+.testimonial__container {
+    max-width: 40rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial__quote {
+    font-size: var(--fs-2xl);
+    font-style: italic;
+    line-height: 1.35;
+}
+
+.testimonial__attribution {
+    align-self: end;
+    font-weight: 900;
+}
+
 /* Utility classes */
 
 .container {
@@ -184,6 +206,10 @@ header {
     }
     .nav__btn {
         display: none;
+    }
+
+    .testimonial__quote {
+        font-size: var(--fs-3xl);
     }
 }
 /* 768px */
