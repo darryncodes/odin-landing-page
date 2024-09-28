@@ -155,6 +155,21 @@ header {
     font-weight: 900;
 }
 
+.cta {
+    background-color: var(--clr-primary-400);
+    border-radius: var(--radius);
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--clr-neutral-500);
+}
+
+.cta__heading {
+    color: var(--clr-neutral-400);
+    padding-bottom: 0.5rem;
+}
+
 /* Utility classes */
 
 .container {
@@ -170,7 +185,7 @@ header {
 .btn {
     color: var(--clr-neutral-500);
     border: none;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 2rem;
     background-color: var(--clr-primary-400);
     border-radius: var(--radius);
     cursor: pointer;
@@ -179,6 +194,20 @@ header {
 .btn:hover {
     color: var(--clr-neutral-400);
     background-color: var(--clr-primary-500);
+}
+
+.btn-outline {
+    color: var(--clr-neutral-500);
+    border: 1px solid var(--clr-neutral-500);
+    padding: 0.5rem 2rem;
+    background-color: transparent;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.btn-outline:hover {
+    color: var(--clr-neutral-400);
+    border: 1px solid var(--clr-neutral-400);
 }
 
 .padding-y {
@@ -210,6 +239,10 @@ header {
 
     .testimonial__quote {
         font-size: var(--fs-3xl);
+    }
+
+    .cta {
+        padding: 3rem 6rem;
     }
 }
 /* 768px */
